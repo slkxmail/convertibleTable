@@ -1,0 +1,83 @@
+
+.convertibleTable {}
+.convertibleTable > .tableHead {
+    width: 100%;
+    clear: both;
+}
+.convertibleTable > .tableHead > .td {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    padding: 8px;
+    line-height: 1.42857143;
+}
+.convertibleTable > .tableHead > .td_coll_1 {
+    width: 100%;
+    float: left;
+}
+.convertibleTable > .tableHead > .td_coll_2 {
+    width: 50%;
+    float: left;
+}
+.convertibleTable > .tableHead > .td_coll_3 {
+    width: 33%;
+    float: left;
+}
+.convertibleTable > .tableHead > .td_coll_4 {
+    width: 25%;
+    float: left;
+}
+
+.convertibleTable > .tableBody > .tr {
+    width: 100%;
+    clear: both;
+}
+.convertibleTable > .tableBody > .tr > .tdth {}
+.convertibleTable > .tableBody > .tr > .td {
+    float: left;
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+.convertibleTable > .tableBody > .tr:nth-of-type(odd) .td{
+    background-color: #f9f9f9;
+}
+.convertibleTable.narrowTable > .tableBody > .tr:nth-of-type(odd) .td{
+    background: none;
+}
+.convertibleTable.narrowTable > .tableBody > .tr > .td.rowTitleNarrow{
+    background-color: #f9f9f9;
+    vertical-align: bottom;
+    border-top: none;
+    border-bottom: 2px solid #ddd;
+    padding: 8px;
+    line-height: 1.42857143;
+}
+.convertibleTable.narrowTable > .tableBody > .tr > .td.rowSubTitle {
+    font-weight: bold;
+}
+.convertibleTable > .tableBody > .tr > .rowSubTitle {
+    width: 50% !important;
+}
+.convertibleTable > .tableBody > .tr > .narrowCell {
+    width: 50% !important;
+}
+.convertibleTable > .tableBody > .tr > .td_coll_1 {
+    width: 100%;
+//    float: left;
+}
+.convertibleTable > .tableBody > .tr > .td_coll_2 {
+    width: 50%;
+//    float: left;
+}
+.convertibleTable > .tableBody > .tr > .td_coll_3 {
+    width: 33%;
+//    float: left;
+}
+.convertibleTable > .tableBody > .tr > .td_coll_4 {
+    width: 25%;
+//    float: left;
+}
+.convertibleTable > .tableBody > .tr > .rowTitleNarrow {
+    width: 100% !important;
+}
