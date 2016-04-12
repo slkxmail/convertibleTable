@@ -5,13 +5,15 @@ ConvertibleTable = {
         ,tableBody: '.tableBody'
         ,rowTitleArr: []
         ,minWidth: 770
+        ,maxColumn: 5
+        ,countColumn: 2
     }
 
     ,init: function (settingsList) {
         var currentObj = this;
 
         if (settingsList != undefined) {
-            currentObj.settings = $.extend(currentObj.settings, settingsList);
+            currentObj.settings = $.extend({}, currentObj.settings, settingsList);
         }
 //                console.log(currentObj.settings);
         // Записать в массив все заголовки колонок
@@ -23,13 +25,17 @@ ConvertibleTable = {
             currentObj.makeNarrow();
         }
 
-        $(window).on( "resize", function(){
-            if($(window).outerWidth(true) <= currentObj.settings.minWidth) {
-                currentObj.makeNarrow();
-            } else {
-                currentObj.makeNarrowCancel();
-            }
-        });
+        if(currentObj.settings.countColumn > currentObj.settings.maxColumn) {
+            currentObj.makeNarrow();
+        } else {
+            $(window).on( "resize", function(){
+                if($(window).outerWidth(true) <= currentObj.settings.minWidth) {
+                    currentObj.makeNarrow();
+                } else {
+                    currentObj.makeNarrowCancel();
+                }
+            });
+        }
     }
     ,makeNarrow: function(){
         var currentObj = this;
